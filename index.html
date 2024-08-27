@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/encriptado.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div class="container__main">
+            <h1 class="container__title">
+                Encriptador de Texto
+            </h1>
+            <textarea name="text" id="container__text" class="container__text" cols="50" rows="10"
+                placeholder="Ingrese Texto" pattern="[a-z]{1,15}"></textarea>
+            <i class="icon_container fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i>
+            <p class="danger__text" id="danger__text">
+                El texto no tiene que contener números.
+            </p>
+            <div class="container__buttons">
+                <input class="btn" type="button" value="Encriptar" onclick="encriptar()">
+                <input class="btn" type="button" value="Desencriptar" onclick="desencriptar()">
+            </div>
+            <img class="img__main" src="./images/desifrador.avif" alt="img main" id="img__main">
+            <div class="container__hidden" id="text_hidden">
+                <i class="fa-solid fa-check" style="color: #FFD43B;"></i>
+                <p class="danger__text" id="desencriptado">
+                    El texto se encripto correctamente.
+                </p>
+            </div>
+            <textarea name="text" id="container__text__copy" class="container__text_hidden" cols="50" rows="10"
+            ></textarea>
+            <input class="btn__copy" type="button" value="Copiar" onclick="copiar()">
+        </div>
+    </main>
+    <footer>
+        <div class="container__footer">
+            <p class="footer__text">
+                © Copyright 2024 - Desarrollado por Abrahan
+            </p>
+            <div class="footer__space__icons">
+                <a href="https://github.com/KevinDev01" target="_blank" class="footer__icons"><i
+                        class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
